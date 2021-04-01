@@ -1,28 +1,39 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <UserForm />
+    <UserAddress />
+    <UserPassport />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import UserForm from "@/components/UserForm";
+  import UserAddress from "@/components/UserAddress";
+  import UserPassport from "@/components/UserPassport";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    UserPassport,
+    UserAddress,
+    UserForm
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+#app
+  font-family: Roboto, 'sans-serif'
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  display: flex
+  justify-content: space-evenly
+  color: #2c3e50
+  margin-top: 60px
+  flex-wrap: wrap
+
+@media only screen and (max-width: 1008px)
+  #app
+    /*align-items: center*/
+    /*flex-direction: column*/
 </style>
